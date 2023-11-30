@@ -101,10 +101,13 @@
                                 <h2 class="mt-6 text-xl font-semibold text-gray-900 dark:text-white">Users delete</h2>
 
                                 <p class="mt-4 text-gray-500 dark:text-gray-400 text-sm leading-relaxed">
-                                    Deleting the user is approachable by address <b style="color: black">"{root path}/users/{id}"</b> with method <b style="color: black">DELETE</b>
+                                    Delete the user is approached by address <b style="color: black">"{root path}/users/{id}"</b> with method <b style="color: black">DELETE</b>
                                 </p>
                             </div>
                         </div>
+                    </div>
+                    <div class="scale-100 p-6 flex">
+                        <h5><i>For more info you can read <b>"readme.md"</b> file in project directory</i></h5>
                     </div>
                 </div>
 
