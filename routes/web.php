@@ -23,5 +23,6 @@ Route::get('/users/{id}',  [\App\Http\Controllers\UserController::class, 'single
 Route::controller(\App\Http\Controllers\UserController::class)->group(function () {
     Route::post('/users',  [\App\Http\Controllers\UserController::class, 'create']);
     Route::put('/users/{id}',  [\App\Http\Controllers\UserController::class, 'update']);
+    Route::delete('/users/{id}',  [\App\Http\Controllers\UserController::class, 'delete']);
 });
 

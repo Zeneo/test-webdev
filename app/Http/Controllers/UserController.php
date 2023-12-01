@@ -101,4 +101,21 @@ class UserController extends Controller
             ->json(['msg' => 'Successful', 'err_code' => 200]);
     }
 
+    /**
+     * @param int $id
+     * @return JsonResponse
+     */
+    public function delete(int $id): JsonResponse
+    {
+        $user = Users::find($id);
+        if(!$user) {
+            return  response()
+                ->json(['msg' => 'Failed to find user by given id', 'err_code' => 500]);
+        }
+
+        $user->delete();
+
+        return  response()
+            ->json(['msg' => 'Successful', 'err_code' => 200]);
+    }
 }
