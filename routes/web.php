@@ -14,6 +14,14 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
+//    return csrf_token();
     return view('instructions');
 });
 Route::get('/users',  [\App\Http\Controllers\UserController::class, 'index']);
+Route::get('/users/{id}',  [\App\Http\Controllers\UserController::class, 'single']);
+//Route::get('/token',  [\App\Http\Controllers\UserController::class, 'token']);    // Uncomment when token is needed
+Route::controller(\App\Http\Controllers\UserController::class)->group(function () {
+    Route::post('/users',  [\App\Http\Controllers\UserController::class, 'create']);
+    Route::put('/users/{id}',  [\App\Http\Controllers\UserController::class, 'update']);
+});
+
